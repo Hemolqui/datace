@@ -5,6 +5,12 @@ sudo apt install nombre_paquete: Instala un paquete específico.
 sudo apt remove nombre_paquete: Desinstala un paquete.
 dpkg: Herramienta de bajo nivel para manejar paquetes .deb directamente.
 
+-------------------------------------------------------------------------- por si te olvidas de
+sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+sudo a2enconf phpmyadmin
+sudo service apache2 restart
+------------------------------------------------------------------------------
+
 Ejemplos:
 
 sudo dpkg -i nombre_paquete.deb: Instala un paquete .deb.
