@@ -1,3 +1,16 @@
+sudo dpkg -i nombre_del_archivo.dev
+sudo apt update: Actualiza la lista de paquetes disponibles.
+sudo apt upgrade: Actualiza los paquetes instalados.
+sudo apt install nombre_paquete: Instala un paquete específico.
+sudo apt remove nombre_paquete: Desinstala un paquete.
+dpkg: Herramienta de bajo nivel para manejar paquetes .deb directamente.
+
+Ejemplos:
+
+sudo dpkg -i nombre_paquete.deb: Instala un paquete .deb.
+sudo dpkg -r nombre_paquete: Desinstala un paquete.
+dpkg -l: Muestra una lista de paquetes instalados.
+
 apt install open-vm-tools-Desktop
 -----------------------------------------------------------------------
 - ingeresar como root 
