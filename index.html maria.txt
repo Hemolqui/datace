@@ -1,0 +1,37 @@
+GRANT USAGE ON *.* TO 'root'@localhost IDENTIFIED BY 'contraseña';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@localhost IDENTIFIED BY 'contraseña';
+--------------------------------------------------------------------------------
+mysql -u root –p
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'contraseña';
+FLUSH PRIVILEGES;
+mysql -h 192.168.0.20 -u root –p
+mysql -h 192.168.0.20 -u root –p
+---------------------------------------------------------------------------------------------------------------------------
+administración de base de datos: roles y permisos 
+Crear un nuevo usuario: En MySQL/MariaDB, puedes crear un nuevo usuario utilizando el siguiente comando:
+CREATE USER 'nombre_de_usuario'@'localhost' IDENTIFIED BY 'contraseña';
+CREATE USER 'nombre_de_usuario'@'192.168.0.X' IDENTIFIED BY 'contraseña';
+--------------------------------------------------------------------------------------------------------------------------
+Conceder permisos al usuario en una base de datos específica:
+GRANT tipo_de_permiso ON nombre_de_base_de_datos.* TO 'nombre_de_usuario'@'localhost';
+GRANT tipo_de_permiso ON nombre_de_base_de_datos.* TO 'nombre_de_usuario'@'192.168.0.X';
+Reemplaza 'tipo_de_permiso' con los permisos que deseas otorgar, como SELECT, INSERT, UPDATE, DELETE, etc.
+GRANT ALL PRIVILEGES ON my_database.* TO 'nombre_de_usuario'@'localhost';
+GRANT ALL PRIVILEGES ON my_database.* TO 'nombre_de_usuario'@'192.168.0.X';
+--------------------------------------------------------------------------------------------------------------------------
+Conceder permisos globales al usuario: Si deseas otorgar permisos globales al usuario, lo que significa que el usuario tendrá los mismos permisos en todas las bases de datos, puedes usar el siguiente comando:
+GRANT tipo_de_permiso ON *.* TO 'nombre_de_usuario'@'localhost';
+GRANT tipo_de_permiso ON *.* TO 'nombre_de_usuario'@'192.168.0.X';
+Actualizar los privilegios: Después de otorgar los permisos, asegúrate de aplicar los cambios con el siguiente comando:
+FLUSH PRIVILEGES;
+Verificar los permisos del usuario: Puedes verificar los permisos que tiene un usuario en una base de datos o en todas las bases de datos utilizando el siguiente comando:
+SHOW GRANTS FOR 'nombre_de_usuario'@'localhost';
+Otorga permiso SELECT al usuario 'user_readonly' en las tablas específicas que desees. Por ejemplo, si deseas dar acceso a las tablas 'tabla1' y 'tabla2', utiliza los siguientes comandos:
+GRANT SELECT ON my_database.tabla1 TO 'user_readonly'@'localhost';
+GRANT SELECT ON my_database.tabla2 TO 'user_readonly'@'localhost';
+GRANT UPDATE, CREATE ON nombre_de_base_de_datos.nombre_de_tabla TO 'nombre_de_usuario'@'localhost';
+Si el usuario ya tenía permisos en todas las tablas de la base de datos ('*'), puedes revocar esos privilegios para restringirlo a las tablas específicas:
+REVOKE SELECT ON my_database.* FROM 'user_readonly'@'localhost';
+----------------------------------------------------------------------------------------------------------------------------------
+Aplica los cambios de privilegios:
+FLUSH PRIVILEGES;

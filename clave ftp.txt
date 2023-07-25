@@ -1,0 +1,64 @@
+- ingeresar como root 
+su - hemolqui
+----------------------------------------------------------
+rutas claseve
+-cambiar el nombre del php
+nano /etc/phpmyadmin/apache.conf
+-cambiar el puerto del ssh
+nano /etc/ssh/sshd_config
+- cambiar ip de mariadb a 0.0.0.0  inves del 127.0.0.0
+nano /etc/mysql/mariadb.conf.d/50-server.cnf
+
+- si no vas a configurar puertos individuales, configurar por defecto en el puerto 80 que salga otro siempre para que salga cuaquier archivo, la ruta y se termino
+------------------------------------------------------------------------------
+configurar sites_available
+<VirtualHost *:8085>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html/sistema_sie
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        <Directory /var/www/html/sistema_sie>
+                Options Indexes FollowSymLinks
+                AllowOverride All
+                Require all granted
+        </Directory>
+</VirtualHost>
+
+
+----------------------------------------------------------------------------------------------------
+copiar archivos
+rsync -avz -e "ssh -p XXXX" hemolqui@192.168.0.18:/var/www/sistema_escuela /var/www/html
+----------------------------------------------------------------------------------------------------
+
+SVFTP
+---------------------------------------------------------
+https://www.server-world.info/en/note?os=Debian_9&p=ftp&f=1
+creando servidor ftp
+1) apt -y install vsftpd
+seguir los pasos de todo
+al ultimo aumentar listen_port=3030
+
+2)
+
+//adduser --force-badname -home /var/www/MiUpea/ -no-create-home -shell /bin/bash franck.miupea
+sudo adduser --force-badname -home /var/www/html/sistema_escuela -no-create-home -shell /bin/bash hemolqui.upea
+addgroup hemolqui.upea ftp
+
+chown hemolqui.upea:hemolqui.hemolqui /var/www/html/sistema_escuela -R
+chown hemolqui.upea:hemolqui.hemolqui /var/www/html/sistema_restaurante -R
+
+
+
+configurar el entorno de desarrollo en visual code
+{
+    "name": "pagina servidor",
+    "host": "192.168.0.18",
+    "protocol": "sftp",
+    "port": 3030,
+    "username": "hemolqui.upea",
+    "password": "root123",
+    "remotePath": "/var/www/html/sistema_restaurante",
+    "uploadOnSave": true,
+    "useTempFile": false,
+    "openSsh": false
+}
