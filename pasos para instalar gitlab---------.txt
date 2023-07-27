@@ -1,0 +1,56 @@
+pasos para instalar gitlab---------------
+
+https://howtoforge.es/como-instalar-gitlab-en-debian-11/
+
+curl -s https://packages.gitlab.com/gpg.key | apt-key add -
+apt-get update
+sida errores---------------
+
+external_url 'http://192.168.100.10'
+letsencrypt['enable'] = false
+sudo gitlab-ctl reconfigure
+sudo gitlab-ctl restart
+sudo systemctl restart apache2
+
+
+sudo gitlab-ctl status unicorn
+sudo gitlab-ctl status sidekiq
+
+
+sudo gitlab-ctl stop unicorn
+sudo gitlab-ctl stop sidekiq
+
+sudo gitlab-ctl start unicorn
+sudo gitlab-ctl start sidekiq
+
+
+
+sudo tail -n 100 /var/log/syslog
+sudo tail -n 100 /var/log/messages
+
+sudo nano /etc/gitlab/gitlab.rb
+external_url 'http://localhost:8088'
+sudo gitlab-ctl reconfigure
+sudo gitlab-ctl restart
+
+sudo apt update
+sudo apt upgrade
+sudo apt install -y curl openssh-server ca-certificates
+curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+sudo apt install -y gitlab-ce
+sudo nano /etc/gitlab/gitlab.rb
+external_url 'http://localhost:8088'
+sudo gitlab-ctl reconfigure
+sudo gitlab-ctl start
+
+sudo tail -n 100 /var/log/gitlab/gitlab-rails/production.log
+sudo gitlab-ctl restart
+sudo gitlab-rake cache:clear
+
+gitlab-rake "gitlab:password:reset[root]"
+
+
+
+sudo /etc/init.d/networking restart
+sudo ip link set nombre_del_adaptador down
+sudo ip link set nombre_del_adaptador up

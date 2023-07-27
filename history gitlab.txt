@@ -1,0 +1,217 @@
+ 1  clear
+    2  nano /etc/
+    3  cd /etc/
+    4  ls
+    5  nano source 
+    6  nano apt/sources.list
+    7  apt update
+    8  apt upgrade
+    9  apt install open-mv--tools-desktop
+   10  apt install open-mv--tools-desktop
+   11  apt install open-mv--tools-desktop
+   12  apt install open-mv--tools-desktop
+   13  apt install open-mv--tools-desktop
+   14  deb http://deb.debian.org/debian bookworm main non-free-firmware
+   15  deb-src http://deb.debian.org/debian bookworm main non-free-firmware
+   16  deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+   17  deb-src http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+   18  deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
+   19  deb-src http://deb.arfgadfgadfgadfgad
+   20  fclear
+   21  clear
+   22  apt install open-mv-tools-desktop
+   23  apt install open-vm-tools-desktop
+   24  deb http://deb.debian.org/debian bookworm main non-free-firmware
+   25  deb-src http://deb.debian.org/debian bookworm main non-free-firmware
+   26  deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+   27  deb-src http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+   28  deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
+   29  deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmwaredeb http://deb.debian.org/debian bookworm main non-free-firmware
+   30  deb-src http://deb.debian.org/debian bookworm main non-free-firmware
+   31  deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+   32  deb-src http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+   33  deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
+   34  deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmware~sadasdas
+   35  clear
+   36  deb http://deb.debian.org/debian bookworm main non-free-firmware
+   37  deb-src http://deb.debian.org/debian bookworm main non-free-firmware
+   38  deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+   39  deb-src http://deb.debian.odf
+   40  clear
+   41  sudo reboot
+   42  apt install openssh-serve
+   43  apt install openssh-server
+   44  clear
+   45  nano /etc/ssh/sshd_config
+   46  systemctl restart ssh
+   47  systemctl status ssh
+   48  ip a
+   49  clear
+   50  cd /var/www/
+   51  cd /var/www/htmk
+   52  cd /var/www/html
+   53  cd var/www/html
+   54  cd /var/www/html
+   55  cd
+   56  cd /var/www/html
+   57  lslbk
+   58  lslkb
+   59  lsblk
+   60  cd /var/www/html
+   61  ls
+   62  cd /var
+   63  ls
+   64  cd tmp/
+   65  ls
+   66  clear
+   67  cd ..
+   68  apt install apache2
+   69  cd /www/html
+   70  clear
+   71  cd..
+   72  dc
+   73  cd
+   74  clear
+   75  cd /var/www/html
+   76  ls
+   77  mkdir sistema_escuela
+   78  ls
+   79  cd sistema_escuela/
+   80  nano index.html
+   81  nano /etc/ssh/sshd_config
+   82  cd
+   83  sudo apt install vsftpd
+   84  nano /etc/vsftpd.conf -ls
+   85  nano -ls /etc/vsftpd.conf 
+   86  nano ls /etc/vsftpd.conf 
+   87  nano -ls /etc/vsftpd.conf 
+   88  nano -la /etc/vsftpd.conf 
+   89  sudo systemctl restart vsftpd
+   90  nano -la /etc/vsftpd.conf 
+   91  sudo systemctl restart vsftpd
+   92  sudo adduser hemolqui.upea
+   93  sudo adduser hemolqui.upea
+   94  sudo adduser hemolqui_upea
+   95  adduser hemolqui_upea ftp
+   96  sudo adduser hemolqui_upea ftp
+   97  sudo chown -R hemolqui_upea:hemolqui_upea /var/www/html/sistema_escuela
+   98  nano /etc/ssh/sshd_config
+   99  systemctl restart ssh
+  100  systemctl status ssh
+  101  nano /etc/ssh/sshd_config
+  102  systemctl status ssh
+  103  systemctl restart ssh
+  104  systemctl status ssh
+  105  clear
+  106  nano /etc/ssh/sshd_config
+  107  nano -la /etc/vsftpd.conf 
+  108  systemctl restart vsftpd
+  109  ip a
+  110  nano -la /etc/vsftpd.conf 
+  111  systemctl restart vsftpd
+  112  systemctl restart ssh
+  113  systemctl status ssh
+  114  chown -R hemolqui_upea:hemolqui_upea /var/www/html/sistema_escuela
+  115  chown -R hemolqui_upea:hemolqui_upea /var/www/html/sistema_escuelas
+  116  chown -R hemolqui_upea:hemolqui_upea /var/www/html/sistema_escuela
+  117  clear
+  118  nano -la /etc/vsftpd.conf 
+  119  systemctl status ssh
+  120  systemctl restart vsftpd
+  121  systemctl restart ssh
+  122  nano -la /etc/vsftpd.conf 
+  123  nano /etc/ssh/sshd_config
+  124  systemctl restart ssh
+  125  systemctl restart networking
+  126  ls
+  127  clear
+  128  ip a
+  129  clear
+  130  apt-get update -y
+  131  apt-get install curl ca-certificates apt-transport-https gnupg2 -y
+  132  nano /etc/apt/sources.list
+  133  nano /etc/apt/sources.list
+  134  curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | bash
+  135  nano /etc/apt/sources.list.d/gitlab_gitlab-ce.list
+  136  apt-get update -y
+  137  apt-get update -y
+  138  sudo apt-get update -y
+  139  sudo apt-get update -y
+  140  apt-get update -y
+  141  apt-get update -y
+  142  nano /etc/apt/sources.list.d/gitlab_gitlab-ce.list
+  143  apt-get update -y
+  144  apt-get update -y
+  145  sudo apt-get update -y
+  146  sudo apt-get update -y
+  147  nano /etc/apt/sources.list.d/gitlab_gitlab-ce.list
+  148  nano /etc/apt/sources.list.d/gitlab_gitlab-ce.list
+  149  sudo apt-get update -y
+  150  nano /etc/apt/sources.list
+  151  sudo apt-get update -y
+  152  curl -s https://packages.gitlab.com/gpg.key | apt-key add -
+  153  apt-get update
+  154  apt-get update -y
+  155  apt-get install gitlab-ce -y
+  156  nano /etc/gitlab/gitlab.rb
+  157  gitlab-ctl reconfigure
+  158  cat /etc/gitlab/initial_root_password
+  159  nano /etc/gitlab/gitlab.rb
+  160  nano /etc/gitlab/gitlab.rb
+  161  nano /etc/gitlab/gitlab.rb
+  162  nano /etc/gitlab/gitlab.rb
+  163  nano /etc/gitlab/gitlab.rb
+  164  gitlab-ctl status
+  165  sudo gitlab-ctl status unicorn
+  166  sudo gitlab-ctl status sidekiq
+  167  sudo gitlab-ctl stop unicorn
+  168  sudo gitlab-ctl stop sidekiq
+  169  sudo gitlab-ctl start unicorn
+  170  sudo gitlab-ctl start sidekiq
+  171  sudo gitlab-ctl status
+  172  sudo gitlab-ctl status
+  173  nano /etc/gitlab/gitlab.rb
+  174  nano /etc/gitlab/gitlab.rb
+  175  sudo gitlab-ctl reconfigure
+  176  sudo gitlab-ctl reconfigure
+  177  nano /etc/gitlab/gitlab.rb
+  178  sudo gitlab-ctl reconfigure
+  179  /etc/gitlab/gitlab.rb
+  180  nano /etc/gitlab/gitlab.rb
+  181  nano /etc/gitlab/gitlab.rb
+  182  nano /etc/gitlab/gitlab.rb
+  183  sudo gitlab-ctl reconfigure
+  184  sudo systemctl restart apache2
+  185  nano /var/log/gitlab/
+  186  /var/log/gitlab/
+  187  cd /var/log/gitlab/
+  188  ls
+  189  sudo tail -n 100 /var/log/syslog
+  190  sudo tail -n 100 /var/log/syslog
+  191  sudo tail -n 100 /var/log/syslog-ng
+  192  nano /etc/gitlab/gitlab.rb
+  193  nano /etc/gitlab/gitlab.rb
+  194  sudo gitlab-ctl reconfigure
+  195  sudo nano /etc/nginx/sites-available/gitlab
+  196  cd  /etc/nginx/sites-available/gitlab
+  197  cd  /etc/nginx/sites-available/
+  198  sudo nano /etc/apache2/sites-available/gitlab.conf
+  199  cd  /etc/apache2/sites-available/
+  200  ls
+  201  sudo gitlab-ctl status
+  202  sudo tail -n 100 /var/log/gitlab/gitlab-rails/production.log
+  203  nano /etc/gitlab/gitlab.rb
+  204  nano /etc/gitlab/gitlab.rb
+  205  sudo apt install -y curl openssh-server ca-certificates
+  206  curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+  207  sudo apt install -y gitlab-ce
+  208  sudo nano /etc/gitlab/gitlab.rb
+  209  sudo gitlab-ctl reconfigure
+  210  sudo gitlab-ctl start
+  211  sudo tail -n 100 /var/log/gitlab/gitlab-rails/production.log
+  212  sudo gitlab-ctl restart
+  213  sudo gitlab-rake cache:clear
+  214  gitlab-rake "gitlab:password:reset[root]"
+  215  gitlab-rake "gitlab:password:reset[root]"
+  216  clear
+  217  history 
