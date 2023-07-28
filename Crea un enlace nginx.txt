@@ -1,0 +1,92 @@
+sudo pkill ices2   --- terminar la transmicion 
+ices2 /etc/ices2/ices-playlist.xml &  ---------- levantar la transmicion
+Crea un enlace simbólico para habilitar la configuración de Nginx:
+
+sudo nano /etc/nginx/sites-available/icecast
+*-------------------------------------------------
+server {
+    listen 80;
+    server_name tu_dominio_o_ip;
+
+    location / {
+        root /ruta/a/tu/sitio/web; # Ruta donde se encuentra la página de reproductor
+    }
+
+    location /stream {
+        proxy_pass http://localhost:8000; # Cambiar el puerto si has modificado el puerto de Icecast2
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+*---------------------------------------------------------	
+sudo ln -s /etc/nginx/sites-available/icecast /etc/nginx/sites-enabled/
+
+sudo systemctl restart nginx
+------------------------------------------------------------------------
+
+sudo apt install icecast2
+------------------------------------------
+sudo apt-get install icecast2
+apt-get install icecast2 ices2 vorbis-tools
+
+------------------ rutas --------------------------
+root@Radio:/etc/ices2# 
+ices-playlist.xml  lista.txt
+
+
+
+root@Radio:/etc/icecast2# ls
+admin  icecast.xml  web
+
+
+root@Radio:/etc/nginx/sites-enabled# ls
+default  icecast2
+
+root@Radio:/home/radio/Descargas# ls
+audio1.mp3  audio3.mp3	icecast.xml	   llorando.ogg
+audio2.mp3  icecast2	ices-playlist.xml  mi_transmision.m3u
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------- adorno --------------------------
+sudo apt-get install icecast2 //OTRA MANERA DE INSTALLAR /// apt-get install icecast2 ices2 vorbis-tools
+
+nano /etc/icecast2/icecast.xml //editar el archivo password,puerto,etc.
+
+systemctl restart icecast2.service //reiniciamos el servicio
+systemctl enable icecast2.service
+systemctl status icecast2.service
+
+mkdir /etc/ices2 //creamos un directorio
+
+cd /usr/share/doc/ices2/examples/  //un archivo que se creo por defecto
+
+cp ices-playlist.xml /etc/ices2/ //copiamos el archivo al directorio que creamos
+
+mkdir /var/log/ices2  //creamos un directorio para los log
+
+cd /etc/ices2/
+
+nano ices-playlist.xml //configurar el nombre del streaming,genero,descripcion
+
+mkdir /sri  //crear la carpeta de montaje
+
+find /home/basedatos/Descargas/Musicas/ -iname *.mp3 >> /etc/ices2/musica //enviar la musica a la carpeta
+
+ices2 /etc/ices2/ices-playlist.xml &   //con esto ya se ejecutara
